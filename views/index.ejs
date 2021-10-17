@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %> 
+<body>
+  
+
+
+    <%- include('./partials/nav.ejs') %> 
+
+   
+    
+    <div class="container">
+        <h2>Home page</h2>
+    </div>
+    <h2>All blogs</h2>
+    <div class="blog-content">
+     
+       <% 
+       if(blogs.length > 0){
+           blogs.forEach(blog => {
+               %>
+            <div class="blog-card">
+            <div class="blog-title">
+                <%=blog.title %>
+            </div>
+            <div class="blog-snippet">
+                <%=blog.snippet%>
+            </div>
+        </div>
+            <%
+           });
+       }
+       %> 
+       
+    </div>
+
+
+    <%- include('./partials/footer.ejs')%>
+</body>
+</html>
+
