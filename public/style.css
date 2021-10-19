@@ -3,7 +3,7 @@
           box-sizing: border-box;
           margin: 0;
           overflow-x: hidden;
-          filter: invert(1) hue-rotate(270deg);
+         
       }
       .container{
     display: flex;
